@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Guía completa sobre desarrollo web: frontend, backend, tecnologías, proceso de trabajo, buenas prácticas y tendencias.">
+  <title>Desarrollo Web | Guía completa</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314161a'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='monospace' font-size='26' fill='white'%3E%26lt;/%26gt;%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="Desarrollo Web, ir al inicio">
+        <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
+        <span>Desarrollo<span class="brand-accent">Web</span></span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navegacion">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="navegacion" class="site-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#que-es">Qué es</a></li>
+          <li><a href="#areas">Áreas</a></li>
+          <li><a href="#tecnologias">Tecnologías</a></li>
+          <li><a href="#proceso">Proceso</a></li>
+          <li><a href="#practicas">Buenas prácticas</a></li>
+          <li><a href="#tendencias">Tendencias</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" tabindex="-1">
+    <section id="inicio" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Guía esencial</p>
+          <h1>Construye experiencias digitales que funcionen</h1>
+          <p class="lead">El desarrollo web combina diseño, código y estrategia para crear sitios y aplicaciones accesibles, rápidos y útiles. Aquí encontrarás una visión clara de sus áreas, herramientas y buenas prácticas.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#que-es">Empezar a explorar</a>
+            <a class="btn btn-secondary" href="#areas">Ver las áreas</a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="window">
+            <div class="window-bar">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <div class="window-body">
+              <span class="code-line"><span class="token-tag">&lt;main&gt;</span></span>
+              <span class="code-line indent"><span class="token-tag">&lt;h1&gt;</span>Hola, web<span class="token-tag">&lt;/h1&gt;</span></span>
+              <span class="code-line indent"><span class="token-tag">&lt;p&gt;</span>Ideas que cobran vida.<span class="token-tag">&lt;/p&gt;</span></span>
+              <span class="code-line indent"><span class="token-tag">&lt;button</span> <span class="token-attr">type</span>=<span class="token-string">"button"</span><span class="token-tag">&gt;</span>Explorar<span class="token-tag">&lt;/button&gt;</span></span>
+              <span class="code-line"><span class="token-tag">&lt;/main&gt;</span></span>
+            </div>
+          </div>
+          <div class="floating-card card-one"><span class="card-dot"></span>Accesible</div>
+          <div class="floating-card card-two"><span class="card-dot"></span>Rápido</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="que-es" class="section section-alt">
+      <div class="container">
+        <header class="section-heading">
+          <span class="section-number">01</span>
+          <p class="eyebrow">Fundamentos</p>
+          <h2>¿Qué es el desarrollo web?</h2>
+          <p>Es el proceso de crear y mantener sitios y aplicaciones que se ejecutan en internet. Implica desde la estructura del contenido y su presentación hasta la lógica del servidor, las bases de datos y el despliegue.</p>
+        </header>
+
+        <div class="grid grid-3">
+          <article class="feature-card">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="2.5" y="4" width="19" height="13" rx="2"></rect><path d="M8 20h8M12 17v3"></path></svg>
+            </span>
+            <h3>Cliente y servidor</h3>
+            <p>El navegador solicita recursos y el servidor responde con datos. Entender este intercambio es la base para diagnosticar y mejorar cualquier aplicación.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"></path></svg>
+            </span>
+            <h3>Código con propósito</h3>
+            <p>HTML da estructura, CSS define la apariencia y JavaScript añade comportamiento. Cada capa resuelve un problema distinto y se complementa con las demás.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.7 3.7 5.7 3.7 9S14.5 18.3 12 21c-2.5-2.7-3.7-5.7-3.7-9S9.5 5.7 12 3z"></path></svg>
+            </span>
+            <h3>Web abierta</h3>
+            <p>Estándares compartidos permiten que una misma página funcione en distintos navegadores, dispositivos y tamaños de pantalla sin depender de una sola plataforma.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="areas" class="section">
+      <div class="container">
+        <header class="section-heading">
+          <span class="section-number">02</span>
+          <p class="eyebrow">Especialidades</p>
+          <h2>Frontend, backend y full stack</h2>
+          <p>Las áreas no son excluyentes. La mayoría de los proyectos necesita combinarlas para entregar una experiencia completa, desde la interfaz hasta la infraestructura.</p>
+        </header>
+
+        <div class="grid grid-3">
+          <article class="area-card">
+            <span class="area-label">Interfaz</span>
+            <h3>Frontend</h3>
+            <p>Se encarga de lo que la persona ve y usa: maquetación, diseño adaptable, interacciones, accesibilidad y rendimiento percibido en el navegador.</p>
+            <div class="tag-list">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">React / Vue</span>
+            </div>
+          </article>
+
+          <article class="area-card featured">
+            <span class="area-label">Lógica</span>
+            <h3>Backend</h3>
+            <p>Gestiona datos, autenticación, reglas de negocio e integraciones. Expone APIs que el frontend consume para mostrar información real y mantenerla segura.</p>
+            <div class="tag-list">
+              <span class="tag">Node.js</span>
+              <span class="tag">Python</span>
+              <span class="tag">SQL / NoSQL</span>
+              <span class="tag">APIs REST</span>
+            </div>
+          </article>
+
+          <article class="area-card">
+            <span class="area-label">Integral</span>
+            <h3>Full stack</h3>
+            <p>Conecta ambas capas y comprende el ciclo completo: arquitectura, despliegue, monitorización y mantenimiento. Es una visión de conjunto, no una lista de herramientas.</p>
+            <div class="tag-list">
+              <span class="tag">Arquitectura</span>
+              <span class="tag">Git</span>
+              <span class="tag">Despliegue</span>
+              <span class="tag">Pruebas</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="tecnologias" class="section section-alt">
+      <div class="container">
+        <header class="section-heading">
+          <span class="section-number">03</span>
+          <p class="eyebrow">Herramientas</p>
+          <h2>Tecnologías que forman el ecosistema</h2>
+          <p>No hace falta conocerlo todo. Conviene elegir herramientas según el problema, entender bien los fundamentos y añadir nuevas piezas cuando el proyecto lo pida.</p>
+        </header>
+
+        <div class="grid grid-3">
+          <article class="feature-card">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M8 5L3 12l5 7M16 5l5 7-5 7"></path></svg>
+            </span>
+            <h3>Estructura y estilos</h3>
+            <p>HTML semántico, CSS moderno con Grid y Flexbox, variables personalizadas, tipografía fluida y animaciones respetuosas con las preferencias del usuario.</p>
+            <div class="tag-list">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS Grid</span>
+              <span class="tag">Flexbox</span>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M14 4h-4v16h4M18 8h3v8h-3M3 8h3v8H3"></path></svg>
+            </span>
+            <h3>Lógica e interactividad</h3>
+            <p>JavaScript para manipular el DOM, gestionar eventos, consumir APIs y organizar código en módulos. Los frameworks ayudan, pero no sustituyen los fundamentos.</p>
+            <div class="tag-list">
+              <span class="tag">DOM</span>
+              <span class="tag">async/await</span>
+              <span class="tag">Módulos</span>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M6 3v12a6 6 0 0 0 12 0V3M6 8h12"></path></svg>
+            </span>
+            <h3>Datos y servicios</h3>
+            <p>Formatos como JSON, APIs REST o GraphQL y bases de datos relacionales o documentales permiten persistir información y conectar la web con otros sistemas.</p>
+            <div class="tag-list">
+              <span class="tag">JSON</span>
+              <span class="tag">REST</span>
+              <span class="tag">PostgreSQL</span>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5"></circle><circle cx="18" cy="6" r="2.5"></circle><circle cx="12" cy="18" r="2.5"></circle><path d="M8 7.5l2.7 8M16 7.5l-2.7 8M8.5 6h7"></path></svg>
+            </span>
+            <h3>Flujo de trabajo</h3>
+            <p>Git para versionar, npm para gestionar dependencias, DevTools para depurar y editores con extensiones que agilizan tareas repetitivas sin ocultar lo que ocurre.</p>
+            <div class="tag-list">
+              <span class="tag">Git</span>
+              <span class="tag">npm</span>
+              <span class="tag">DevTools</span>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.4 8.3-8 9-4.6-.7-8-4-8-9V7l8-4z"></path><path d="M9 12l2 2 4-4"></path></svg>
+            </span>
+            <h3>Calidad</h3>
+            <p>Pruebas automatizadas, linters, análisis de accesibilidad y medición de rendimiento ayudan a detectar problemas antes de que lleguen a las personas usuarias.</p>
+            <div class="tag-list">
+              <span class="tag">Pruebas</span>
+              <span class="tag">Lighthouse</span>
+              <span class="tag">Linting</span>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 17l5-5-5-5M12 19h8"></path></svg>
+            </span>
+            <h3>Publicación</h3>
+            <p>Un proyecto web cobra sentido cuando está disponible. Plataformas estáticas y servicios en la nube simplifican el despliegue, los dominios y los certificados.</p>
+            <div class="tag-list">
+              <span class="tag">GitHub Pages</span>
+              <span class="tag">Netlify</span>
+              <span class="tag">Vercel</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="proceso" class="section">
+      <div class="container">
+        <header class="section-heading">
+          <span class="section-number">04</span>
+          <p class="eyebrow">Metodología</p>
+          <h2>Un proceso claro reduce la incertidumbre</h2>
+          <p>Trabajar por etapas permite tomar decisiones con información, detectar cambios a tiempo y entregar versiones cada vez mejores.</p>
+        </header>
+
+        <div class="process-list">
+          <article class="step">
+            <span class="step-number" aria-hidden="true">01</span>
+            <div>
+              <h3>Descubrimiento</h3>
+              <p>Definir el objetivo, el público, los requisitos y las restricciones. Una pregunta bien formulada al inicio evita mucho retrabajo después.</p>
+            </div>
+          </article>
+
+          <article class="step">
+            <span class="step-number" aria-hidden="true">02</span>
+            <div>
+              <h3>Diseño y arquitectura</h3>
+              <p>Dibujar flujos, pantallas y estructura de datos. Decidir qué tecnologías usar y cómo se organizarán el contenido y el código.</p>
+            </div>
+          </article>
+
+          <article class="step">
+            <span class="step-number" aria-hidden="true">03</span>
+            <div>
+              <h3>Implementación</h3>
+              <p>Convertir las decisiones en interfaces y servicios. Trabajar en incrementos pequeños facilita revisar el resultado y corregir el rumbo.</p>
+            </div>
+          </article>
+
+          <article class="step">
+            <span class="step-number" aria-hidden="true">04</span>
+            <div>
+              <h3>Pruebas y ajustes</h3>
+              <p>Comprobar navegación, formularios, compatibilidad, accesibilidad y rendimiento. Corregir los fallos detectados antes de publicar.</p>
+            </div>
+          </article>
+
+          <article class="step">
+            <span class="step-number" aria-hidden="true">05</span>
+            <div>
+              <h3>Despliegue y mantenimiento</h3>
+              <p>Publicar, monitorizar y actualizar. Una web es un producto vivo: necesita revisiones periódicas de contenido, seguridad y dependencias.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="practicas" class="section section-alt">
+      <div class="container">
+        <header class="section-heading">
+          <span class="section-number">05</span>
+          <p class="eyebrow">Calidad</p>
+          <h2>Buenas prácticas que marcan la diferencia</h2>
+          <p>Son decisiones sencillas que mejoran la experiencia de todas las personas y facilitan el trabajo del equipo que mantiene el proyecto.</p>
+        </header>
+
+        <div class="grid grid-3">
+          <article class="feature-card">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="3"></circle><path d="M5 21c0-4 3.1-6 7-6s7 2 7 6"></path></svg>
+            </span>
+            <h3>Accesibilidad</h3>
+            <p>Usar etiquetas semánticas, alternativas textuales, contraste suficiente y navegación por teclado. Diseñar para todas las personas también mejora el SEO.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M13 3L5 14h6l-1 7 8-11h-6l1-7z"></path></svg>
+            </span>
+            <h3>Rendimiento</h3>
+            <p>Optimizar imágenes, reducir JavaScript innecesario, cargar recursos de forma inteligente y medir métricas reales en lugar de suponer.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.4 8.3-8 9-4.6-.7-8-4-8-9V7l8-4z"></path></svg>
+            </span>
+            <h3>Seguridad</h3>
+            <p>Validar entradas, proteger sesiones, usar HTTPS, limitar permisos y mantener dependencias actualizadas. La seguridad se diseña desde el principio.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M8 4h8a3 3 0 0 1 3 3v13H5V7a3 3 0 0 1 3-3z"></path><path d="M9 9h6M9 13h6M9 17h3"></path></svg>
+            </span>
+            <h3>Código mantenible</h3>
+            <p>Nombres claros, funciones pequeñas, estructura coherente y documentación útil. El código se lee muchas más veces de las que se escribe.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"></rect><path d="M9 21h6M12 18v3"></path></svg>
+            </span>
+            <h3>Diseño adaptable</h3>
+            <p>Layouts fluidos, contenido legible en pantallas pequeñas y pruebas en dispositivos reales. El móvil suele ser el primer punto de contacto.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 17V9m5 8V5m5 12v-6m5 6V7"></path></svg>
+            </span>
+            <h3>Medición y SEO</h3>
+            <p>Metas claras, encabezados jerárquicos, metadatos útiles y análisis de uso. Mejorar sin datos es apenas una opinión.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="tendencias" class="section">
+      <div class="container">
+        <header class="section-heading">
+          <span class="section-number">06</span>
+          <p class="eyebrow">Panorama</p>
+          <h2>Tendencias que condicionan la web actual</h2>
+          <p>Más que perseguir novedades, conviene entender qué cambia en la forma de construir, medir y mantener productos digitales.</p>
+        </header>
+
+        <div class="grid grid-2">
+          <article class="trend-card">
+            <span class="trend-index">Tendencia 01</span>
+            <h3>Asistentes de IA en el flujo de trabajo</h3>
+            <p>Aceleran tareas como generar ejemplos, revisar código o explorar alternativas. La responsabilidad sobre el resultado y la decisión final siguen siendo humanas.</p>
+          </article>
+
+          <article class="trend-card">
+            <span class="trend-index">Tendencia 02</span>
+            <h3>Rendimiento medido</h3>
+            <p>Las métricas de experiencia real influyen en la calidad percibida y en la visibilidad. Optimizar ya no es una mejora opcional al final del proyecto.</p>
+          </article>
+
+          <article class="trend-card">
+            <span class="trend-index">Tendencia 03</span>
+            <h3>Arquitecturas distribuidas y periferia (edge)</h3>
+            <p>Generar y servir contenido cerca de la persona usuaria reduce latencia. Las plataformas estáticas y serverless acercan estas capacidades a equipos pequeños.</p>
+          </article>
+
+          <article class="trend-card">
+            <span class="trend-index">Tendencia 04</span>
+            <h3>Accesibilidad como estándar</h3>
+            <p>Cada vez se trata menos de una lista de requisitos y más de una condición de calidad integrada en diseño, código y pruebas desde el primer día.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <p class="eyebrow">Siguiente paso</p>
+        <h2>El mejor momento para empezar es con una pequeña idea</h2>
+        <p>Crea una página sencilla, publícala y mejórala con cada iteración. El aprendizaje real aparece cuando el código sale del editor y alguien lo utiliza.</p>
+        <a class="btn btn-primary" href="#inicio">Volver al inicio</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-brand">DesarrolloWeb</p>
+        <p>Una guía clara para entender cómo se construye la web.</p>
+      </div>
+      <nav aria-label="Navegación del pie de página">
+        <ul class="footer-links">
+          <li><a href="#que-es">Fundamentos</a></li>
+          <li><a href="#areas">Áreas</a></li>
+          <li><a href="#practicas">Buenas prácticas</a></li>
+          <li><a href="#tendencias">Tendencias</a></li>
+        </ul>
+      </nav>
+      <p class="footer-copy">© <span id="year">2026</span> · Hecho con HTML, CSS y JavaScript.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" type="button" aria-label="Volver al inicio">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
